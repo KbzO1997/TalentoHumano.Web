@@ -1,0 +1,10 @@
+﻿.botonModalClose {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.cursor-pointer{
+    cursor:pointer;
+}

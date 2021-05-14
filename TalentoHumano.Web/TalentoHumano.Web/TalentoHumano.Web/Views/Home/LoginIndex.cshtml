@@ -1,0 +1,150 @@
+﻿@model TalentoHumano.Web.Models.Login
+
+@{
+    ViewBag.Title = "LoginIndex";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Talento Humano Login</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="~/Content/img/icon.ico" type="image/x-icon" />
+    <!-- Fonts and icons -->
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link href="~/Content/css/appTalentoHumano.css" rel="stylesheet" />
+    <link href="~/Content/css/my-login.css" rel="stylesheet" />
+</head>
+
+<body class="my-login-page">
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center h-100">
+                <div class="card-wrapper">
+                    <div class="brand">
+                        <img src="~/Content/img/logo.jpg" />
+                    </div>
+                    <!--Navigate Index Ini-->
+                    <div class="card fat DivNavigateIndex">
+                        <div class="card-body">
+                            <h4 class="card-title">Login</h4>
+                            <form method="POST" class="my-login-validation" novalidate="">
+                                <div class="form-group">
+                                    <label for="email">E-Mail Address</label>
+                                    <input id="email_login" type="email" class="form-control" name="email" value="" required autofocus>
+                                    <div class="invalid-feedback">
+                                        Email is invalid
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">
+                                        Password
+                                        <a href="forgot.html" class="float-right">
+                                            Forgot Password?
+                                        </a>
+                                    </label>
+                                    <input id="password_login" type="password" class="form-control" name="password" required data-eye>
+                                    <div class="invalid-feedback">
+                                        Password is required
+                                    </div>
+                                </div>
+
+                                <div class="form-group m-0">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Login
+                                    </button>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    Don't have an account? <a href="register.html">Create One</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Navigate Index Fin-->
+                    <!--Navigate Restaurar Contraseña Ini-->
+                    <div class="card fat DivNavigateContrasenia">
+                        <div class="card-body">
+                            <h4 class="card-title">Forgot Password</h4>
+                            <form method="POST" class="my-login-validation" novalidate="">
+                                <div class="form-group">
+                                    <label for="email">E-Mail Address</label>
+                                    <input id="email_contrasenia" type="email" class="form-control" name="email" value="" required autofocus>
+                                    <div class="invalid-feedback">
+                                        Email is invalid
+                                    </div>
+                                    <div class="form-text text-muted">
+                                        By clicking "Reset Password" we will send a password reset link
+                                    </div>
+                                </div>
+                                <div class="form-group m-0">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Reset Password
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Navigate Restaurar Contraseña Fin-->
+                    <!--Navigate Registrar User Ini-->
+                    <div class="card fat DivNavigateRegister">
+                        <div class="card-body">
+                            <h4 class="card-title">Register</h4>
+                            <form method="POST" class="my-login-validation" novalidate="">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input id="name_user" type="text" class="form-control" name="name" required autofocus>
+                                    <div class="invalid-feedback">
+                                        What's your name?
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">E-Mail Address</label>
+                                    <input id="email_user" type="email" class="form-control" name="email" required>
+                                    <div class="invalid-feedback">
+                                        Your email is invalid
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input id="password_user" type="password" class="form-control" name="password" required data-eye>
+                                    <div class="invalid-feedback">
+                                        Password is required
+                                    </div>
+                                </div>
+
+                                <div class="form-group m-0">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Register
+                                    </button>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    Already have an account? <a href="index.html">Login</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Navigate Registrar User Fin-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--   Core JS Files   -->
+    <script src="~/Scripts/js/core/jquery.3.2.1.min.js"></script>
+    <script src="~/Scripts/js/core/popper.min.js"></script>
+    <script src="~/Scripts/js/core/bootstrap.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="~/Scripts/js/plugin/sweetalert/sweetalert.min.js"></script>
+    <!-- Mi Scripts! -->
+    <script src="~/Scripts/personalizado/Recursivo.js"></script>
+    <script src="~/Scripts/personalizado/SistemaInterno.js"></script>
+    <script src="~/Scripts/personalizado/Login.js"></script>
+</body>
+
+</html>

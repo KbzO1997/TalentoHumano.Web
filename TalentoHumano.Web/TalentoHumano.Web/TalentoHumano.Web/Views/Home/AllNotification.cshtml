@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AllNotification";
+}
+
+<div class="col-sm-12 card row">
+    <div class="col-sm-2">
+        @{Html.RenderAction("_Botonera", "Home", new { Ver = "", Id = "", Nombre = "Personal", Onclick = "MantenedorTest.ViewConsultarRecurso();", Ico = "_PERSONA" });}<br />
+        @{Html.RenderAction("_Botonera", "Home", new { Ver = "", Id = "", Nombre = "Equipo", Onclick = "MantenedorTest.ViewConsultarRecurso();", Ico = "_EQUIPO" });}
+    </div>
+    <div class="col-sm-10">
+        <h5>Todas las notificaciones</h5>
+        <span class="text-primary">Pueden visualizarse las notificaciones de los 3 últimos meses</span>
+        <div class="form-group">
+            <label for="password">Integrante de Equipo</label>
+            @{Html.RenderAction("CmbIntegrantesEquipos", "Personal", new { area = "Personal" });}
+        </div>
+        <div class="form-group">
+            <label for="password">Fecha Desde</label>
+            <input type="date" class="form-control" id="fechaDesde" value="">
+        </div>
+        <div class="form-group">
+            <label for="password">Fecha Hasta</label>
+            <input type="date" class="form-control" id="fechaHasta" value="">
+        </div>
+        @{Html.RenderAction("_Botonera", "Home", new { Ver = "", Id = "", Nombre = "", Onclick = "MantenedorTest.ViewConsultarRecurso();", Ico = "_FILTRO" });}
+
+        <div class="table-responsive">
+            @{Html.RenderAction("TablaPullNotification", "Personal", new { area = "Personal" });}
+        </div>
+    </div>
+</div>
+

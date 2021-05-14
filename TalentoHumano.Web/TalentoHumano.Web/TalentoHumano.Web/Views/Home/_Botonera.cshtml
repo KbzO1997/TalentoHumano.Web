@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "_Botonera";
+}
+
+
+
+@{
+    Layout = null;
+    string isVisibled = ViewBag.isVisibled;
+    string isIdentify = ViewBag.isIdentify;
+    string isNameButton = ViewBag.isNameButton;
+    string isEvent = ViewBag.isEvent;
+    string isAccion = ViewBag.isAccion;
+    string isUrl = String.Empty;
+
+    switch (isAccion)
+    {
+        case "_PERSONA":
+            isUrl = "fa-user-circle";
+            break;
+        case "_EQUIPO":
+            isUrl = "fa-user-friends";
+            break;
+        case "_FILTRO":
+            isUrl = "fa-filter";
+            break;
+        case "ACCION_USER":
+            isUrl = "PNG_USERADD.png";
+            break;
+        case "ACCION_MENU":
+            isUrl = "PNG_USERMENU.png";
+            break;
+        case "ACCION_GRID_EDIT":
+            isUrl = "PNG_EDIT.png";
+            break;
+        case "ACCION_SEARCH":
+            isUrl = "PNG_SEARCH.png";
+            break;
+        case "ACCION_DELETE":
+            isUrl = "PNG_DELETE.png";
+            break;
+        case "ACCION_NEXT":
+            isUrl = "PNG_NEXT.png";
+            break;
+        case "ACCION_READING":
+            isUrl = "PNG_READING.png";
+            break;
+        case "ACCION_SPEAKING":
+            isUrl = "SPEAKING.png";
+            break;
+        case "ACCION_LISTENIGN":
+            isUrl = "PNG_LISTENING.png";
+            break;
+        case "ACCION_ALEATORIO":
+            isUrl = "PNG_ALEATORIO.png";
+            break;
+        case "ACCION_CURSO":
+            isUrl = "PNG_CURSO.png";
+            break;
+        case "ACCION_CURSOESTUDIANTE":
+            isUrl = "PNG_CURSOESTUDIANTE.png";
+            break;
+        case "ACCION_USERACTIVE":
+            isUrl = "PNG_USERACTIVE.png";
+            break;
+        case "ACCION_USERINACTIVE":
+            isUrl = "PNG_USERINACTIVE.png";
+            break;
+        case "ACCION_URL":
+            isUrl = "PNG_URL.png";
+            break;
+        case "ACCION_FILE":
+            isUrl = "PNG_FILE.png";
+            break;
+        case "ACCION_TAREA":
+            isUrl = "PNG_TAREA.png";
+            break;
+        case "ACCION_CALIFICAR":
+            isUrl = "PNG_CALIFICAR.png";
+            break;
+        case "ACCION_HOME":
+            isUrl = "PNG_HOME.png";
+            break;
+        case "ACCION_COHETE":
+            isUrl = "PNG_COHETE.png";
+            break;
+        case "ACCION_CORREO":
+            isUrl = "PNG_CORREO.png";
+            break;
+        case "ACCION_CALIFICADO":
+            isUrl = "PNG_CALIFICADO.png";
+            break;
+        case "ACCION_PENDIENTE":
+            isUrl = "PNG_PENDIENTE.png";
+            break;
+
+    }
+
+}
+
+<button class="btn btn-outline-primary ml-2  @isVisibled @isIdentify" type="submit" onclick="@isEvent">
+    <i class="fas @isUrl"></i>@isNameButton
+</button>
+
+
+

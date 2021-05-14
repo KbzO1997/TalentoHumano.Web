@@ -1,0 +1,13 @@
+﻿@using TalentoHumano.Web.Models
+
+@{
+    List<Catalogo> items = (List<Catalogo>)ViewBag.ListaIntegrantes;
+}
+
+<input type="search" class="form-control" list="IntegranteList" id="lista_integrante" autocomplete="off">
+<datalist id="IntegranteList">
+    @foreach (var item in items)
+    {
+        <option data-xyz="@item.id">@item.nombre</option>
+    }
+</datalist>
